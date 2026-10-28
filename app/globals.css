@@ -169,7 +169,7 @@ nav.wrap {
 /* HERO */
 .hero {
   position: relative;
-  min-height: 75vh;
+  min-height: 85vh;
   display: flex;
   align-items: center;
   background: radial-gradient(ellipse 900px 500px at 15% 0%, rgba(226, 168, 61, 0.14), transparent 60%),
