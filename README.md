@@ -59,4 +59,4 @@ Cuando quieran, seguimos con esas.
 
 ## Configuración de contacto
 
-Para habilitar el formulario de correo, copiá `.env.example` a `.env.local` y completá `NEXT_PUBLIC_CONTACT_EMAIL` con el correo de la empresa. El formulario abre la aplicación de correo de quien consulta con el mensaje preparado; no envía mensajes desde el servidor. Es necesario reiniciar el servidor de desarrollo después de cambiar la variable. Confirmá que ambos números de la sección de contacto estén habilitados en WhatsApp antes de publicar.
+Durante la demostración, las consultas se preparan para enviarse a `bluckbery57@gmail.com`. Para cambiar el destinatario por el correo de la empresa, copiá `.env.example` a `.env.local` y completá `NEXT_PUBLIC_CONTACT_EMAIL`. El formulario abre la aplicación de correo de quien consulta con el mensaje preparado; no envía mensajes desde el servidor. Es necesario reiniciar el servidor de desarrollo después de cambiar la variable. Los dos números de la sección de contacto están habilitados en WhatsApp.

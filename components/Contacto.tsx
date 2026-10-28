@@ -6,7 +6,7 @@ const telefonos = [
   { numero: "+54 381 543-5578", whatsapp: "5493815435578" },
   { numero: "+54 381 665-8473", whatsapp: "5493816658473" },
 ];
-const correo = process.env.NEXT_PUBLIC_CONTACT_EMAIL?.trim() ?? "";
+const correo = process.env.NEXT_PUBLIC_CONTACT_EMAIL?.trim() || "bluckbery57@gmail.com";
 
 function WhatsAppIcon() {
   return (
