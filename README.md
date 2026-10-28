@@ -56,3 +56,7 @@ El prototipo cubre la home. Quedan pendientes como páginas propias:
 - **Contacto** (`/contacto`) — hoy es un footer; se puede armar como página con formulario.
 
 Cuando quieran, seguimos con esas.
+
+## Configuración de contacto
+
+Para habilitar el formulario de correo, copiá `.env.example` a `.env.local` y completá `NEXT_PUBLIC_CONTACT_EMAIL` con el correo de la empresa. El formulario abre la aplicación de correo de quien consulta con el mensaje preparado; no envía mensajes desde el servidor. Es necesario reiniciar el servidor de desarrollo después de cambiar la variable. Confirmá que ambos números de la sección de contacto estén habilitados en WhatsApp antes de publicar.

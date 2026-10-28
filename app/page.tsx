@@ -4,6 +4,7 @@ import Marcas from "@/components/Marcas";
 import Productos from "@/components/Productos";
 import QuienesSomos from "@/components/QuienesSomos";
 import Footer from "@/components/Footer";
+import Contacto from "@/components/Contacto";
 
 export default function Home() {
   return (
@@ -13,6 +14,7 @@ export default function Home() {
       <Marcas />
       <Productos />
       <QuienesSomos />
+      <Contacto />
       <Footer />
     </>
   );

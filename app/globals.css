@@ -642,3 +642,38 @@ footer {
     gap: 30px;
   }
 }
+/* CONTACTO */
+.contacto { background: var(--rice); color: #422d1d; padding: 110px 0; scroll-margin-top: 90px; }
+.contacto-heading { max-width: 740px; margin-bottom: 48px; }
+.contacto-kicker, .contacto-label { font-family: var(--font-inter), sans-serif; font-size: 12px; font-weight: 700; letter-spacing: .13em; text-transform: uppercase; }
+.contacto-kicker { color: #925b19; }
+.contacto-heading h2 { font-size: clamp(40px, 6vw, 68px); line-height: 1.1; margin: 16px 0; }
+.contacto-heading p, .contacto-grid p { font-family: var(--font-inter), sans-serif; line-height: 1.65; }
+.contacto-heading p { font-size: 18px; }
+.contacto-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; align-items: stretch; }
+.contacto-whatsapp, .contacto-correo { padding: clamp(24px, 4vw, 44px); border-radius: 6px; }
+.contacto-whatsapp { background: #67472f; color: #f9f2e4; }
+.contacto-correo { background: #fffaf2; border: 1px solid #d6c5aa; }
+.contacto-label { color: #aa6e26; }
+.contacto-whatsapp .contacto-label { color: #f2c26d; }
+.contacto-grid h3 { font-size: clamp(21px, 2.3vw, 27px); line-height: 1.3; margin: 16px 0 12px; }
+.contacto-grid p { font-size: 15px; }
+.contacto-numeros { display: grid; gap: 10px; margin-top: 28px; }
+.contacto-numero { display: flex; align-items: center; gap: 13px; padding: 14px; color: #fff; border: 1px solid rgba(255,255,255,.35); border-radius: 5px; font: 700 16px var(--font-inter), sans-serif; transition: background .2s; }
+.contacto-numero:hover { background: rgba(255,255,255,.12); }
+.contacto-whatsapp-icon { display: grid; place-items: center; flex: 0 0 38px; height: 38px; border-radius: 50%; background: #257b4b; }
+.contacto-whatsapp-icon svg { width: 23px; height: 23px; }
+.contacto-flecha { margin-left: auto; font-size: 20px; }
+.contacto-ubicacion { border-top: 1px solid rgba(255,255,255,.22); padding-top: 28px; margin-top: 36px; }
+.contacto-ubicacion p { margin-top: 12px; }
+.contacto-correo form { display: grid; gap: 9px; margin-top: 24px; }
+.contacto-correo label { font: 600 14px var(--font-inter), sans-serif; margin-top: 8px; }
+.contacto-correo input, .contacto-correo textarea { width: 100%; border: 1px solid #b5a58f; border-radius: 4px; padding: 12px; background: white; color: #302014; font: 16px var(--font-inter), sans-serif; }
+.contacto-correo textarea { resize: vertical; min-height: 125px; }
+.contacto-correo button { border: 0; border-radius: 4px; padding: 16px 20px; background: #67472f; color: white; font: 700 15px var(--font-inter), sans-serif; cursor: pointer; text-align: left; margin-top: 10px; }
+.contacto-correo button span { float: right; }
+.contacto-correo button:hover:not(:disabled) { background: #422d1d; }
+.contacto-correo button:disabled { background: #a49888; cursor: not-allowed; }
+.contacto-correo .contacto-aviso, .contacto-correo .contacto-ayuda { font-size: 13px; margin-top: 3px; }
+.contacto a:focus-visible, .contacto input:focus-visible, .contacto textarea:focus-visible, .contacto button:focus-visible { outline: 3px solid #b9832a; outline-offset: 3px; }
+@media (max-width: 760px) { .contacto { padding: 70px 0; } .contacto-heading { margin-bottom: 30px; } .contacto-grid { grid-template-columns: 1fr; } }

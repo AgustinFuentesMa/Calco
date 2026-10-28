@@ -1,6 +1,6 @@
 export default function Footer() {
   return (
-    <footer id="contacto">
+    <footer>
       <div className="wrap foot-grid">
         <div>
           <h4>Calco Argentina</h4>
