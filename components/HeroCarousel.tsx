@@ -34,7 +34,7 @@ export default function HeroCarousel() {
             fill
             priority={i === 0}
             sizes="100vw"
-            style={{ objectFit: "cover" }}
+            className="hero-carousel-image"
           />
         </div>
       ))}
@@ -53,3 +53,4 @@ export default function HeroCarousel() {
     </div>
   );
 }
+
