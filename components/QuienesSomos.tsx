@@ -17,13 +17,13 @@ export default function QuienesSomos() {
           </p>
         </div>
         <div className="stat-box">
-          <div className="num">Salta</div>
+          <div className="num">100%</div>
           <div className="cap">
-            Nuestros campos se encuentran en el sur y este de la provincia.
+            de lo que envasamos lo producimos nosotros mismos — la única
+            empresa del país que puede decir esto.
           </div>
         </div>
       </div>
     </section>
   );
 }
-
