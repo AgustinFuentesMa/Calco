@@ -169,13 +169,13 @@ nav.wrap {
 /* HERO */
 .hero {
   position: relative;
-  min-height: 100vh;
+  min-height: 75vh;
   display: flex;
   align-items: center;
   background: radial-gradient(ellipse 900px 500px at 15% 0%, rgba(226, 168, 61, 0.14), transparent 60%),
     linear-gradient(180deg, var(--loam) 0%, var(--loam-2) 100%);
   overflow: hidden;
-  padding-top: 100px;
+  padding: 120px 0 80px;
 }
 
 .grain-noise {
@@ -244,7 +244,7 @@ nav.wrap {
 .hero-inner {
   position: relative;
   z-index: 2;
-  padding-bottom: 140px;
+  padding-bottom: 50px;
 }
 
 .eyebrow {
