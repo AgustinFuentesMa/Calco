@@ -23,7 +23,7 @@ const jbMono = JetBrains_Mono({
 export const metadata: Metadata = {
   title: "Calco Argentina",
   description:
-    "Calco Argentina produce y comercializa cereales, legumbres y oleaginosas, con campos en Salta y las marcas Campo Lindo, Don Apiro y Super Omega.",
+    "Calco Argentina produce el 100% de lo que envasa: arroz, avena, legumbres y maíz, desde Tucumán bajo las marcas Campo Lindo, Don Apiro y Super Omega.",
 };
 
 export default function RootLayout({
@@ -37,4 +37,3 @@ export default function RootLayout({
     </html>
   );
 }
-
