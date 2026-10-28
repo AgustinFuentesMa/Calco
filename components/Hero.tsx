@@ -14,15 +14,16 @@ export default function Hero() {
       </svg>
 
       <div className="wrap hero-inner">
-        <span className="eyebrow mono">Salta · desde el campo</span>
+        <span className="eyebrow mono">Tucumán · desde el campo</span>
         <h1>
           De la chacra a tu mesa,
           <br />
           sin intermediarios en el camino.
         </h1>
         <p className="lead">
-          Somos una empresa familiar dedicada a la producción y comercialización
-          de cereales, legumbres y oleaginosas, con campos en Salta.
+          Somos la única empresa del país que produce el 100% de lo que envasa:
+          arroz, avena, legumbres y maíz cultivados, elaborados y empaquetados en
+          Tucumán.
         </p>
         <div className="cta-row">
           <a href="#productos" className="btn-primary">
@@ -38,4 +39,3 @@ export default function Hero() {
     </section>
   );
 }
-
