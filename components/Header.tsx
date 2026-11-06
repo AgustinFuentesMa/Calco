@@ -13,6 +13,7 @@ const LINKS = [
 
 export default function Header() {
   const [scrolled, setScrolled] = useState(false);
+  const [menuAbierto, setMenuAbierto] = useState(false);
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 40);
@@ -20,20 +21,30 @@ export default function Header() {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
+  useEffect(() => {
+    if (!menuAbierto) return;
+    const cerrarConEscape = (event: KeyboardEvent) => {
+      if (event.key === "Escape") setMenuAbierto(false);
+    };
+    window.addEventListener("keydown", cerrarConEscape);
+    return () => window.removeEventListener("keydown", cerrarConEscape);
+  }, [menuAbierto]);
+
   return (
-    <header className={`site-header${scrolled ? " scrolled" : ""}`}>
-      <nav className="wrap">
+    <header className={`site-header${scrolled ? " scrolled" : ""}${menuAbierto ? " menu-open" : ""}`}>
+      <nav className="wrap" aria-label="Navegación principal">
         <div className="logo">
           <img className="logo-fracoga" src={logo.src} alt="Logo" />
         </div>
-        <div className="nav-links">
+        <div id="menu-principal" className={`nav-links${menuAbierto ? " open" : ""}`}>
           {LINKS.map((l) => (
-            <a key={l.href} href={l.href}>
+            <a key={l.href} href={l.href} onClick={() => setMenuAbierto(false)}>
               {l.label}
             </a>
           ))}
         </div>
-        <button className="nav-toggle" aria-label="Menú">
+        <button type="button" className="nav-toggle" aria-label={menuAbierto ? "Cerrar menú" : "Abrir menú"}
+          aria-controls="menu-principal" aria-expanded={menuAbierto} onClick={() => setMenuAbierto((abierto) => !abierto)}>
           <span />
           <span />
           <span />
@@ -42,3 +53,4 @@ export default function Header() {
     </header>
   );
 }
+
