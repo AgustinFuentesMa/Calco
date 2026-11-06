@@ -275,9 +275,9 @@ nav.wrap {
 .hero .lead {
   margin-top: 24px;
   max-width: 520px;
-  font-size: 17px;
+  font-size: 19px;
   line-height: 1.6;
-  color: rgba(244, 238, 224, 0.895);
+  color: #fffaf0;
 }
 
 .cta-row {
