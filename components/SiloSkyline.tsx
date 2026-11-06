@@ -11,7 +11,7 @@ export default function SiloSkyline() {
       {espigas.map((indice) => (
         <svg key={indice} className="campo-espiga"
           style={{ left: `${1 + indice * 2.75}%`, "--crecimiento": `${0.8 + indice * 0.145}s`, "--cosecha": `${7.45 + indice * 0.165}s`, "--altura": `${70 + (indice % 4) * 7}px` } as CSSProperties}
-          viewBox="0 0 48 90" fill="none">
+          viewBox="0 0 48 90" preserveAspectRatio="xMidYMax meet" fill="none">
           <path d="M23 90C22 63 21 41 19 19M24 90C28 62 32 48 38 33M22 90C18 66 12 52 8 40" stroke="#8b9d50" strokeWidth="2" />
           <path d="M22 90C17 72 11 63 1 59c6 0 15 1 22 15C18 58 14 52 7 47c9 3 16 10 19 23C29 58 36 52 46 50 37 57 31 68 27 90Z" fill="#718d3f" />
           <path d="M21 90C16 77 10 73 3 71c8-1 15 2 20 11C28 69 35 65 46 65c-9 5-15 13-18 25Z" fill="#a6b85a" />
