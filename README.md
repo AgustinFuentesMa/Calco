@@ -15,7 +15,9 @@ Después abrí http://localhost:3000
 
 ## Formulario de contacto
 
-El formulario usa la API de Resend para enviar consultas a `bluckbery57@gmail.com` (destinatario provisional). Para activarlo, configurá en el servidor `RESEND_API_KEY` con una clave de Resend y `CONTACT_FROM_EMAIL` con un remitente autorizado por ese servicio. Configurá ambas variables también en el alojamiento. Sin ellas el formulario mostrará un mensaje de error y no enviará correos. Las respuestas llegan al correo ingresado por el visitante mediante Reply-To.
+El formulario envía las consultas con Resend. Copiá `.env.example` como `.env.local` y configurá `RESEND_API_KEY`, `CONTACT_FROM_EMAIL` (remitente autorizado) y `CONTACT_TO_EMAIL` (casilla que recibe las consultas). No compartas ni subas `.env.local`: contiene la clave privada. Reiniciá el servidor al cambiar estas variables y configurá las mismas variables en el alojamiento cuando corresponda. Las respuestas van al correo ingresado por el visitante mediante Reply-To.
+
+Para probar con `onboarding@resend.dev`, Resend limita los destinatarios de prueba al correo de la cuenta. Para usar la casilla de la empresa, verificá primero un dominio propio en Resend y configurá el remitente autorizado y el destinatario empresarial. Al configurar DNS, conservá los registros existentes del correo de la empresa y coordiná los cambios con quien administre el dominio.
 
 ## Estructura
 
