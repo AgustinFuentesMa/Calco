@@ -642,3 +642,10 @@ footer {
     gap: 30px;
   }
 }
+@media (max-width: 900px) {
+  header.site-header.menu-open { background: rgba(36, 26, 18, 0.97); }
+  .nav-links.open { display: flex; flex-direction: column; position: absolute; top: 100%; left: 16px; right: 16px; gap: 0; padding: 8px 20px; background: #302116; border: 1px solid var(--line); border-radius: 0 0 12px 12px; box-shadow: 0 12px 24px rgba(0, 0, 0, 0.22); }
+  .nav-links.open a { padding: 14px 4px; }
+  .nav-toggle { align-items: center; justify-content: center; width: 44px; height: 44px; }
+  .nav-toggle:focus-visible, .nav-links.open a:focus-visible { outline: 2px solid var(--maize); outline-offset: 3px; }
+}
