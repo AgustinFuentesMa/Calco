@@ -101,7 +101,8 @@ nav.wrap {
 
 .logo-fracoga
 {
-  width: 120px;
+  width: 160px;
+  max-width: 42vw;
 }
 
 .logo .mark {
@@ -642,13 +643,26 @@ footer {
     gap: 30px;
   }
 }
-/* Animación de entrada del paisaje. */
-.silo-skyline { pointer-events: none; animation: campo-amanecer 1.8s ease-out both; }
-.campo-tractor { position: absolute; z-index: 2; bottom: clamp(32px, 5vw, 70px); left: 0; width: clamp(110px, 12vw, 155px); height: auto; pointer-events: none; opacity: 0; animation: campo-recorrido 7s ease-in-out 0.3s both; }
-@keyframes campo-amanecer { from { transform: translateY(100%); } to { transform: translateY(0); } }
-@keyframes campo-recorrido { 0% { transform: translateX(-120%); opacity: 0; } 8% { opacity: 1; } 88% { opacity: 1; } 100% { transform: translateX(100vw); opacity: 0; } }
-@media (prefers-reduced-motion: reduce) { .silo-skyline { animation: none; } .campo-tractor { display: none; } }
-@media (max-width: 600px) { .campo-tractor { bottom: 60px; } }
+/* Una pequeña escena de siembra, riego y cosecha. */
+.campo-escena { position: absolute; z-index: 1; inset: auto 0 0; height: 190px; overflow: hidden; pointer-events: none; }
+.campo-tierra { position: absolute; bottom: 0; width: 100%; height: 26px; border-top: 5px solid #7c9255; background: radial-gradient(ellipse 3px 2px at center, #d7aa63 98%, transparent) 0 8px / 42px 12px repeat-x, #77543a; }
+.campo-espiga { position: absolute; bottom: 23px; width: clamp(18px, 2.5vw, 30px); height: 80px; transform-origin: bottom center; animation: campo-crecer 0.8s ease-out var(--crecimiento) both; }
+.campo-regadera, .campo-tractor { position: absolute; left: 0; height: auto; opacity: 0; }
+.campo-regadera { width: clamp(75px, 8vw, 105px); bottom: 83px; animation: campo-recorrido 6s linear 0.3s both; }
+.campo-gotas { animation: campo-agua 0.65s ease-in infinite; }
+.campo-tractor { width: clamp(110px, 12vw, 155px); bottom: 18px; animation: campo-recorrido 6s linear 7s both; }
+@keyframes campo-crecer { from { transform: scaleY(0); opacity: 0; } to { transform: scaleY(1); opacity: 1; } }
+@keyframes campo-agua { from { transform: translateY(0); opacity: 1; } to { transform: translateY(18px); opacity: 0; } }
+@keyframes campo-recorrido {
+  0% { transform: translateX(-120%); opacity: 0; }
+  5% { opacity: 1; }
+  90% { opacity: 1; }
+  100% { transform: translateX(100vw); opacity: 0; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .campo-espiga { animation: none; }
+  .campo-regadera, .campo-tractor { display: none; }
+}
 
 .prod-photo-card { animation: productos-caida 0.55s ease-out both; }
 .prod-photo-card:nth-child(5n + 2) { animation-delay: 0.04s; }
