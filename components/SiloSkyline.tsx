@@ -1,6 +1,7 @@
 import type { CSSProperties } from "react";
 
-const espigas = Array.from({ length: 12 }, (_, indice) => indice);
+const espigas = Array.from({ length: 36 }, (_, indice) => indice);
+const gotas = Array.from({ length: 24 }, (_, indice) => indice);
 
 export default function SiloSkyline() {
   return (
@@ -8,7 +9,7 @@ export default function SiloSkyline() {
       <div className="campo-tierra" />
       {espigas.map((indice) => (
         <svg key={indice} className="campo-espiga"
-          style={{ left: `${4 + indice * 8}%`, "--crecimiento": `${0.8 + indice * 0.43}s` } as CSSProperties}
+          style={{ left: `${1 + indice * 2.75}%`, "--crecimiento": `${0.8 + indice * 0.145}s`, "--altura": `${70 + (indice % 4) * 7}px` } as CSSProperties}
           viewBox="0 0 30 80" fill="none">
           <path d="M15 79V17 M15 66C10 58 5 58 3 57 M15 54C20 47 25 47 28 46" stroke="#a6b86b" strokeWidth="3" strokeLinecap="round" />
           <g fill="#e2a83d">
@@ -27,10 +28,13 @@ export default function SiloSkyline() {
         <path d="M22 37h54l-5 36c-1 6-5 9-11 9H39c-6 0-10-3-11-9l-6-36Z" fill="#e2a83d" />
         <path d="M75 51h13l14-15 6 5-16 21H74" fill="#e2a83d" />
         <path d="M100 31l13 10" stroke="#f4eee0" strokeWidth="5" strokeLinecap="round" />
-        <g className="campo-gotas" fill="#badde2">
-          <path d="M101 52c0 3-4 8-4 11a4 4 0 0 0 8 0c0-3-4-8-4-11Z" />
-          <path d="M112 58c0 3-3 6-3 9a3 3 0 0 0 6 0c0-3-3-6-3-9Z" />
-          <path d="M91 63c0 3-3 6-3 9a3 3 0 0 0 6 0c0-3-3-6-3-9Z" />
+        <g fill="#badde2">
+          {gotas.map((indice) => (
+            <ellipse key={indice} className="campo-gota"
+              cx={90 + (indice % 8) * 3.4} cy={50 + Math.floor(indice / 8) * 5}
+              rx="1.4" ry="3"
+              style={{ "--gota-demora": `${-(indice * 0.073)}s` } as CSSProperties} />
+          ))}
         </g>
       </svg>
       <svg className="campo-tractor" viewBox="0 0 120 64" fill="none">
