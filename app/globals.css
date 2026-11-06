@@ -1,5 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Bevan:ital@0;1&display=swap');
-
 :root {
   --loam: #6b4a30;
   --loam-2: #77543a;
@@ -13,9 +11,9 @@
   --line: rgba(244, 238, 224, 0.14);
   --line-dark: rgba(36, 26, 18, 0.14);
 
-  --font-display: 'Bevan', serif;
-  --font-body: 'Bevan', serif;
-  --font-mono: 'Bevan', serif;
+  --font-display: var(--font-roboto-slab), Georgia, serif;
+  --font-body: var(--font-inter), Arial, sans-serif;
+  --font-mono: var(--font-inter), Arial, sans-serif;
 }
 
 * {
@@ -411,8 +409,8 @@ section {
 }
 
 .seal-card h3 {
-  font-family: "Bevan", serif;
-  font-weight: 300;
+  font-family: var(--font-display);
+  font-weight: 600;
   font-size: 25px;
   margin-bottom: 6px;
   color: rgb(110, 57, 14);
@@ -426,7 +424,7 @@ section {
 }
 
 .seal-card p {
-  font-family: "Young Serif", serif;
+  font-family: var(--font-body);
   font-size: 18px;
   line-height: 1.65;
   color: rgb(110, 57, 14);
@@ -526,7 +524,7 @@ section {
 }
 
 .quienes p {
-  font-family: "Young Serif",serif;
+  font-family: var(--font-body);
   font-size: 20px;
   line-height: 1.75;
   color: rgb(110, 57, 14);
