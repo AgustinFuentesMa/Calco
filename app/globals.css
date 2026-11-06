@@ -11,7 +11,7 @@
   --line: rgba(244, 238, 224, 0.14);
   --line-dark: rgba(36, 26, 18, 0.14);
 
-  --font-display: var(--font-roboto-slab), Georgia, serif;
+  --font-display: Georgia, 'Times New Roman', serif;
   --font-body: var(--font-inter), Arial, sans-serif;
   --font-mono: var(--font-inter), Arial, sans-serif;
 }
