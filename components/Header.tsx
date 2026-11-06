@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import logo from "../img/Logos/LogoPie1.png";
+import logo from "../img/Logos/LogoFracogaResolucion.png";
 
 const LINKS = [
   { href: "#inicio", label: "Home" },
