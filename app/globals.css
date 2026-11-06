@@ -673,3 +673,8 @@ footer {
 .prod-photo-card:nth-child(5n + 5) { animation-delay: 0.16s; }
 @keyframes productos-caida { from { opacity: 0; transform: translateY(-28px); } to { opacity: 1; transform: translateY(0); } }
 @media (prefers-reduced-motion: reduce) { .prod-photo-card { animation: none; } }
+
+@media (max-width: 600px) {
+  .campo-espiga { width: 32px; }
+  .campo-espiga:nth-of-type(even) { display: none; }
+}
