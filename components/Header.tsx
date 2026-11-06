@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import logo from "../img/Logos/LogoPie1.png";
+import logo from "../img/Logos/LogoFracogaMejorado.png";
 
 const LINKS = [
   { href: "#inicio", label: "Home" },
@@ -24,7 +24,7 @@ export default function Header() {
     <header className={`site-header${scrolled ? " scrolled" : ""}`}>
       <nav className="wrap">
         <div className="logo">
-          <img className="logo-fracoga" src={logo.src} alt="Logo" />
+          <img className="logo-fracoga" src={logo.src} alt="Fracoga" />
         </div>
         <div className="nav-links">
           {LINKS.map((l) => (
