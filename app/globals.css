@@ -289,6 +289,7 @@ nav.wrap {
 
 .btn-primary,
 .btn-ghost {
+  font-family: 'Bevan', serif;
   padding: 14px 26px;
   border-radius: 2px;
   font-size: 14px;
