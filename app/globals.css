@@ -445,6 +445,8 @@ section {
 }
  
 .productos .section-head p {
+  font-family: 'Bevan', serif;
+  font-weight: 400;
   color: rgba(36, 26, 18, 0.68);
   margin-top: 14px;
   font-size: 15px;
@@ -458,7 +460,7 @@ section {
 }
  
 .marca-tab {
-  font-family: var(--font-mono);
+  font-family: 'Bevan', serif;
   font-size: 12px;
   letter-spacing: 0.08em;
   text-transform: uppercase;
