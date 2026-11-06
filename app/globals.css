@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Bevan:ital@0;1&display=swap');
+
 :root {
   --loam: #6b4a30;
   --loam-2: #77543a;
@@ -641,3 +643,7 @@ footer {
     gap: 30px;
   }
 }
+/* Tipografía original de la sección institucional. */
+.quienes { font-family: 'Bevan', serif; font-weight: 400; }
+.quienes h2, .quienes .mono, .quienes .stat-box .num { font-family: 'Bevan', serif; }
+.quienes p { font-family: 'Young Serif', serif; font-weight: 400; }
