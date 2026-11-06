@@ -21,17 +21,13 @@ export default function SiloSkyline() {
           <path d="M7 28c1 10 3 17 6 25m-8-17 6 4m24-14-2 9m-2-3 6-3m-8 9 6-3" stroke="#f7cd68" strokeWidth="1.5" strokeLinecap="round" />
         </svg>
       ))}
-      <svg className="campo-regadera" viewBox="0 0 125 120" fill="none">
-        <g transform="rotate(28 55 48)">
-          <path d="M35 38c-5-20 4-28 19-28 13 0 20 9 19 25" stroke="#f4eee0" strokeWidth="5" strokeLinecap="round" />
-          <path d="M22 37h54l-5 36c-1 6-5 9-11 9H39c-6 0-10-3-11-9l-6-36Z" fill="#e2a83d" />
-          <path d="M75 51h13l14-15 6 5-16 21H74" fill="#e2a83d" />
-          <path d="M100 31l13 10" stroke="#f4eee0" strokeWidth="5" strokeLinecap="round" />
-        </g>
+      <svg className="campo-nube" viewBox="0 0 125 120" fill="none">
+        <path d="M30 55c-12 0-20-7-20-17 0-10 8-17 18-17 4 0 7 1 10 3C43 13 53 8 64 8c14 0 25 8 28 21 3-2 6-2 9-2 9 0 15 6 15 14s-7 14-17 14H30Z" fill="#f4eee0" />
+        <path d="M27 49h73" stroke="#d9e5df" strokeWidth="3" strokeLinecap="round" opacity=".8" />
         <g fill="#badde2">
           {gotas.map((indice) => (
             <ellipse key={indice} className="campo-gota"
-              cx={95 + (indice % 8) * 3.4} cy={67 + Math.floor(indice / 8) * 3}
+              cx={28 + (indice % 8) * 9} cy={59 + Math.floor(indice / 8) * 4}
               rx="1.4" ry="3"
               style={{ "--gota-demora": `${-(indice * 0.073)}s` } as CSSProperties} />
           ))}
