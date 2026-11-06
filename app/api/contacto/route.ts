@@ -9,7 +9,8 @@ function escaparHtml(texto: string) {
 export async function POST(request: Request) {
   const apiKey = process.env.RESEND_API_KEY;
   const remitente = process.env.CONTACT_FROM_EMAIL;
-  if (!apiKey || !remitente) return NextResponse.json({ error: "Correo no configurado" }, { status: 503 });
+  const destinatario = process.env.CONTACT_TO_EMAIL;
+  if (!apiKey || !remitente || !destinatario) return NextResponse.json({ error: "Correo no configurado" }, { status: 503 });
 
   try {
     const { nombre, email, mensaje } = await request.json();
@@ -48,7 +49,7 @@ export async function POST(request: Request) {
       headers: { Authorization: `Bearer ${apiKey}`, "Content-Type": "application/json" },
       body: JSON.stringify({
         from: remitente,
-        to: ["bluckbery57@gmail.com"],
+        to: [destinatario],
         reply_to: email,
         subject: "Nueva consulta desde el sitio de Calco",
         text: `Nombre: ${nombre.trim()}\nCorreo: ${email}\n\nConsulta:\n${mensaje.trim()}`,
