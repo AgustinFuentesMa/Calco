@@ -38,7 +38,7 @@ export default function Productos() {
           ))}
         </div>
 
-        <div className="prod-photo-grid">
+        <div className="prod-photo-grid" key={activa}>
           {productos.map((producto) => (
             <div className="prod-photo-card" key={producto.slug}>
               <div className="prod-photo-img">
