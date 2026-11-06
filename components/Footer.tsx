@@ -29,7 +29,7 @@ export default function Footer() {
       </div>
 
       <div className="wrap foot-bottom">
-        <span>© 2026 Calco Argentina</span>
+        <span>Copyright 2026 Agustín Fuentes Martínez</span>
         <div className="foot-socials">
           <a href="https://www.facebook.com/CalcoArgentina/" target="_blank" rel="noopener noreferrer">
             <svg viewBox="0 0 24 24" fill="none" strokeWidth={1.6}>
