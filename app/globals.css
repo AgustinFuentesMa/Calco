@@ -646,13 +646,13 @@ footer {
 /* Una pequeña escena de siembra, riego y cosecha. */
 .campo-escena { position: absolute; z-index: 1; inset: auto 0 0; height: 190px; overflow: hidden; pointer-events: none; }
 .campo-tierra { position: absolute; bottom: 0; width: 100%; height: 26px; border-top: 5px solid #7c9255; background: radial-gradient(ellipse 3px 2px at center, #d7aa63 98%, transparent) 0 8px / 42px 12px repeat-x, #77543a; }
-.campo-espiga { position: absolute; bottom: 23px; width: clamp(18px, 2.5vw, 30px); height: 80px; transform-origin: bottom center; animation: campo-crecer 0.8s ease-out var(--crecimiento) both; }
+.campo-espiga { position: absolute; bottom: 23px; width: clamp(14px, 2vw, 28px); height: var(--altura); transform-origin: bottom center; animation: campo-crecer 0.8s ease-out var(--crecimiento) both; }
 .campo-regadera, .campo-tractor { position: absolute; left: 0; height: auto; opacity: 0; }
 .campo-regadera { width: clamp(75px, 8vw, 105px); bottom: 83px; animation: campo-recorrido 6s linear 0.3s both; }
-.campo-gotas { animation: campo-agua 0.65s ease-in infinite; }
+.campo-gota { animation: campo-agua 1.15s linear var(--gota-demora) infinite; }
 .campo-tractor { width: clamp(110px, 12vw, 155px); bottom: 18px; animation: campo-recorrido 6s linear 7s both; }
 @keyframes campo-crecer { from { transform: scaleY(0); opacity: 0; } to { transform: scaleY(1); opacity: 1; } }
-@keyframes campo-agua { from { transform: translateY(0); opacity: 1; } to { transform: translateY(18px); opacity: 0; } }
+@keyframes campo-agua { 0% { transform: translateY(0); opacity: 0; } 12% { opacity: 1; } 80% { opacity: 1; } 100% { transform: translateY(43px); opacity: 0; } }
 @keyframes campo-recorrido {
   0% { transform: translateX(-120%); opacity: 0; }
   5% { opacity: 1; }
